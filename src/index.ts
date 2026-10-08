@@ -24,19 +24,6 @@ async function assertLineExists(lineId: number) {
 }
 
 server.registerTool(
-    "get_current_time",
-    {
-        description: "Returns the current time stamp",
-        inputSchema: {}
-    },
-    async () => ({
-        content: [
-            { type: "text", text: new Date().toISOString() }
-        ]
-    })
-)
-
-server.registerTool(
   "get_production_summary",
   {
     description: "Returns total units, defects, and efficiency for a date range",
